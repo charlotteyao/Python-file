@@ -1,0 +1,112 @@
+﻿pip install missingno
+conda install missingno
+conda install numpy scipy pandas
+# 安装xxxx
+conda install xxxx
+
+# 查看当前环境下已安装的包
+conda list
+
+# 查看某个指定环境的已安装包
+conda list -n python34
+
+# 查找package信息
+conda search numpy
+
+# 安装package
+conda install -n python34 numpy # 如果不用-n指定环境名称，则被安装在当前活跃环境 也可以通过-c指定通过某个channel安装
+
+
+
+# 获取帮助
+conda help
+conda update --help
+
+#检查conda版本
+conda --version
+
+#升级conda
+conda update conda
+
+#列出已安装的包
+conda list
+
+#安装包
+conda install packagename
+conda install numpy pandas scikit-learn matplotlib seaborn
+
+conda命令
+http://conda.pydata.org/docs/index.html
+
+#conda镜像
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --set show_channel_urls yes
+
+#管理conda environments
+conda env --help
+
+#create
+conda create --name yournames packages-your-want
+conda create -n yourname package-your-want
+
+#change env
+source active yourname
+activate your name
+source deactive
+deactivate your
+
+#set python version
+conda create -n yourname python=x.x packages-your-want
+
+#当前environments信息 list env
+conda info --envs
+
+#clone env
+conda create -n name1 --clone name2
+
+#remove env
+conda remove --name yourname --all
+conda info --envs
+
+#manage python
+#当前python 版本
+conda search --full-name python
+conda create --name snakes python=3
+python --version
+
+#managing packages
+conda list
+conda search beeautifulsoup4
+conda install --name bunnies beautifulsoup4
+pip install see
+conda remove --name bunnies iopro
+
+#share env
+source activate yourname
+activate yourname
+conda env export > environment.yml
+conda env create -f environment.yml
+#another way
+conda list -e > spec-file.txt
+conda create --name myname --file spec-file.txt
+
+import sys
+print("python version:{}".format(sys.__version__))
+
+import numpy as np
+print("numpy version:{}".format(np.__version__))
+
+import scipy as sp
+print("scipy version:{}".format(sp.__version__))
+
+import pandas as pd
+print("pandas version:{}".format(pd.__version__))
+
+import matplotlib
+print("matplotlib version:{}".format(matplotlib.__version__))
+
+import IPython
+print("IPython version:{}".format(IPython.__version__))
+
+import sklearn
+print("skit-learn version:{}".format(sklearn.__version__))

@@ -1,0 +1,54 @@
+#matplotlib集成与pylab模式
+ipython --pylab
+
+def add_numbers(a,b):
+	return a+b
+
+add_numbers?
+add_numbers??
+
+#魔术命令
+%quickref显示IPython的快速参考
+%magic显示所有魔术命令的详细文档
+%debug 从最新的异常跟踪的底部进入交互式调试器
+%hist打印命令的输入历史
+%pdb在异常发生后自动进入调试器
+%paste执行剪贴板中的IPython代码
+%cpaste打开一个特殊提示符以便手工粘贴代码
+%reset删除interactive命名空间中的全部变量
+%page OBJECT通过分页器打印输出OBJECT
+%run script.py 在IPython中执行一个Python脚本
+%prun statement 通过cprofile执行statement，并打印分析器的输出结果
+%time statement 报告statement的执行时间
+%timeit statement 多次执行statement以计算平均执行时间
+%who、%who_is、%whos显示interative命名空间中定义的变量
+%xdel variable 删除variable，并尝试清除其在IPython的对象上的一切引用
+
+
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+N = 50
+x = np.random.rand(N)
+y = np.random.rand(N)
+colors = np.random.rand(N)
+area = np.pi*(15*np.random.rand(N))**2
+plt.scatter(x,y,s=area,c=colors,alpha=0.5)
+ptl.show()
+
+#与shell交互
+！cmd在系统shell中执行cmd
+output=!cmd args执行cmd，并将stdout存放在output中
+%alias alias_name cmd 为系统shell定义别名
+%bookm ark 使用IPython的目录书签系统
+%cd directory 执行cd命令
+%pwd返回当前工作目录
+%pushd directory 将当前目录入栈，并转向目标目录
+%dirs 返回一个含有当前目录栈的列表
+%dhist 打印目录访问历史
+%env 以dict形式返回系统环境变量
+
+
+
